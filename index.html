@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Constellation Game</title>
+    <link rel="stylesheet" href="gameStyle.css">
+  </head>
+  <body onload="loadLevels()">
+    <div class = 'fancybg'></div>
+    <table>
+      <tr><th colspan=2><h1 id="levelName"></h1></th></tr>
+      <tr><td><p id='scoreButton'></p><p id='resetButton'></p><p><button onclick="reloadGame()">Change Character</button></p><p><button onclick="showHTP()">How to Play</button></p><div id="charaSticker"></div></td><td><div class='container'><div id='canvasBox'></div></div></td></tr>
+      <tr><td colspan=2 height=64px><h3 id='scoreShow'></h3></td></tr>
+    </table>
+
+    <p id="infoclick" onclick='showAbt()'>
+      *
+    </p>
+
+    <div class="popup" id="Abtpopup">
+      <p><img src="Assets/Oceanid.png"</p>
+      <p><b>Hello!</b> Thanks so much for checking this out!</p>
+      <p>I've been working on this off-and-on for a little while starting mid-2024, so if you're reading this, I'm glad I could finally <br>share it!</p>
+      <p>This game is running on <a href="https://p5js.org/">p5.js</a>, a free open-source JavaScript library accesible through their website. I also owe a huge thanks to <a href="https://codepen.io/marine-fraysse">Marine Fraysse</a>
+        <br> and <a href="https://codepen.io/wheresdara">wheresdara</a> on codepen, whose code I shamelessly copied for the visuals on this page, as well as the team of the <a href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki">Genshin Impact Wiki</a> for compiling
+        <br>the images I used!</a></p>
+      <p>All characters, names, and constellations are property of Hoyoverse. </p>
+      <button onclick="hideAbt()">Close</button>
+    </div>
+
+    <div class="popup" id="HTPpopup">
+      <h2>How to Play</h2>
+        <p><b>Click</b> inside the constellation shape to place a pin!</b></p>
+        <p><img src="Assets/HTP1.png"></p>
+        <p>Place all 6 pins as close to the correct position as you can. If you make a mistake, use the <b>Reset</b> button.</p>
+        <p>Once you've placed all your pins, press the <b>Score</b> button to check how well you did! The closer you placed it to the real star, the higher your score will be.</p>
+        <p><img src="Assets/HTP2.png"></p>
+        <button onclick="hideHTP()">Close</button>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.js"></script>
+  <script src="conObjectCompile.js"></script>
+  <script>
+    function loadLevels(){
+      var x = Math.floor(Math.random() * allCons.length)
+      console.log(x)
+      currentCon = allCons[x];
+      //currentCon = allCons[24];
+      console.log("Constellation Chosen!");
+      document.body.style.background = currentCon.color();
+      console.log(currentCon.color());
+      document.getElementById("levelName").innerHTML = currentCon.chara +" / "+currentCon.name;
+      document.getElementById("charaSticker").innerHTML = '<img src="'+currentCon.sticker+'"width=256px height=256px>';
+      document.getElementById("canvasBox").innerHTML = '<img src="'+currentCon.img+'">';
+    }
+
+    function reloadGame(){
+      window.location.reload();
+    }
+
+    let HTPpopupActive = false;
+
+    function showHTP(){
+      document.getElementById("HTPpopup").style.display ='block';
+      HTPpopupActive = true;
+
+    }
+
+    function hideHTP(){
+      document.getElementById("HTPpopup").style.display ='none';
+        setTimeout(function(){
+          HTPpopupActive = false;
+        },100);
+    }
+
+    let AbtpopupActive = false;
+
+    function showAbt(){
+      document.getElementById("Abtpopup").style.display ='block';
+      AbtpopupActive = true;
+
+    }
+
+    function hideAbt(){
+      document.getElementById("Abtpopup").style.display ='none';
+        setTimeout(function(){
+          AbtpopupActive = false;
+        },100);
+    }
+
+  </script>
+  <script>
+    //variables
+    let dotsPut = 0;
+    let px = [null, null,null, null,null, null];
+    let py = [null, null,null, null,null, null];
+
+    let tx;
+    let ty;
+    console.log("points set");
+
+    let scoreUp = false;
+
+    function setup() {
+      tx = currentCon.xCoords; //sets coordinates to matching con from object file
+      ty = currentCon.yCoords;
+      let gameCanvas = createCanvas(512, 512);
+      gameCanvas.parent("canvasBox")
+      //background(currentCon.color()); //draws game board
+
+      let Sbutton = createButton("Score");
+      Sbutton.parent("scoreButton");
+      Sbutton.mousePressed(countscore);
+
+      let Rbutton = createButton("Reset");
+      Rbutton.parent("resetButton");
+      Rbutton.mousePressed(resetboard);
+    }
+
+    function draw() { //draws points
+      stroke("gold");
+      strokeWeight(1);
+      noFill();
+      if (px != null && py != null) {
+        for (let i = 0; i < dotsPut; i += 1) {
+          beginShape(TRIANGLE_FAN);
+          vertex(px[i], py[i]);
+          vertex(px[i], py[i]-7);
+          vertex(px[i]+7, py[i]);
+          vertex(px[i], py[i]+7);
+          vertex(px[i]-7, py[i]);
+          vertex(px[i], py[i]-7);
+          endShape();
+        }
+      }
+    }
+
+    function mouseClicked(){//generates points
+      if (dotsPut < 6 && mouseX > 0 && mouseX < 512 && mouseY > 0 && mouseY < 512 && popupActive == false && scoreUp == false) {
+        px[dotsPut] = mouseX;
+        py[dotsPut] = mouseY;
+        dotsPut++;
+        console.log("Inside Canvas!");
+      }else{
+        console.log("No!");
+      }
+    }
+
+    function countscore() {
+      scoreUp = true;
+      let score = 0;
+      for (let i = 0; i < tx.length; i += 1){
+        let shortestdistance = 512;
+          for (let j = 0; j < px.length; j += 1){
+            if (floor(dist(px[j], py[j], tx[i], ty[i]))-7< shortestdistance){
+              shortestdistance = floor(dist(px[j], py[j], tx[i], ty[i]));
+            }
+          }
+        score = score + (100-shortestdistance);
+      }
+
+      noStroke();
+      if (score > 0){
+        document.getElementById("scoreShow").innerHTML = ("You scored " + score+" out of 600!<br><br><button onclick='showAnswer()'>Show Answer</button>");
+      } else{
+        document.getElementById("scoreShow").innerHTML = ("Better luck next time!<br><br><button onclick='showAnswer()'>Show Answer</button>");
+      }
+    }
+
+    function resetboard() { //resets the game
+      scoreUp = false;
+      clear();
+      dotsPut = 0;
+      for (let j = 0; j < px.length; j += 1){
+        px[j] = null;
+        py[j] = null;
+      }
+      document.getElementById("scoreShow").innerHTML = "";
+    }
+
+    function showAnswer(){
+      for (let i = 0; i < tx.length; i += 1){
+        strokeWeight(5);
+        point(tx[i], ty[i]);
+        strokeWeight(1);
+        circle(tx[i], ty[i], 150);
+      }
+    }
+
+  </script>

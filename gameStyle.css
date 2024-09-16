@@ -1,0 +1,144 @@
+body{
+  text-align:center;
+  color: #cca300;
+}
+
+table{
+  margin: 0 auto;
+}
+
+table, tr, td{
+  padding: 0;
+}
+
+button{
+  width:175px;
+  height:45px;
+  border-radius:25px;
+  border:5px solid white;
+  background-color: transparent;
+  font-family: "Times New Roman";
+  font-size: 18px;
+  color: white;
+  text-align: center;
+}
+
+button:hover{
+ background-color: white;
+ color: #cca300;
+}
+
+a{
+  color: #cca300;
+}
+
+a:hover{
+  color: white;
+}
+
+.container{
+  position: relative;
+  width: 512px;
+  height: 512px;
+}
+
+#canvasBox{
+  left: 0px;
+  top: 0px;
+}
+
+#canvasBox img{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+}
+
+#canvasBox{
+   position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+#levelName{
+  text-align: center;
+}
+
+#charaSticker{
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+#infoclick{
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  font-family: "Times New Roman";
+  color: white;
+}
+
+.fancybg { /* sourced from https://codepen.io/wheresdara/pen/wvXBpwa */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    z-index: -5;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -42vw -4vh 0px 0px #fff,25vw -41vh 0px 0px #fff,-20vw 49vh 0px 1px #fff,5vw 40vh 1px 1px #fff,29vw 19vh 1px 0px #fff,-44vw -13vh 0px 0px #fff,46vw 41vh 0px 1px #fff,-3vw -45vh 0px 1px #fff,47vw 35vh 1px 0px #fff,12vw -8vh 1px 0px #fff,-34vw 48vh 1px 1px #fff,32vw 26vh 1px 1px #fff,32vw -41vh 1px 1px #fff,0vw 37vh 1px 1px #fff,34vw -26vh 1px 0px #fff,-14vw -49vh 1px 0px #fff,-12vw 45vh 0px 1px #fff,-44vw -33vh 0px 1px #fff,-13vw 41vh 0px 0px #fff,-36vw -11vh 0px 1px #fff,-23vw -24vh 1px 0px #fff,-38vw -27vh 0px 1px #fff,16vw -19vh 0px 0px #fff,28vw 33vh 1px 0px #fff,-49vw -4vh 0px 0px #fff,16vw 32vh 0px 1px #fff,36vw -18vh 1px 0px #fff,-25vw -30vh 1px 0px #fff,-23vw 24vh 0px 1px #fff,-2vw -35vh 1px 1px #fff,-25vw 9vh 0px 0px #fff,-15vw -34vh 0px 0px #fff,-8vw -19vh 1px 0px #fff,-20vw -20vh 1px 1px #fff,42vw 50vh 0px 1px #fff,-32vw 10vh 1px 0px #fff,-23vw -17vh 0px 0px #fff,44vw 15vh 1px 0px #fff,-40vw 33vh 1px 1px #fff,-43vw 8vh 0px 0px #fff,-48vw -15vh 1px 1px #fff,-24vw 17vh 0px 0px #fff,-31vw 50vh 1px 0px #fff,36vw -38vh 0px 1px #fff,-7vw 48vh 0px 0px #fff,15vw -32vh 0px 0px #fff,29vw -41vh 0px 0px #fff,2vw 37vh 1px 0px #fff,7vw -40vh 1px 1px #fff,15vw 18vh 0px 0px #fff,25vw -13vh 1px 1px #fff,-46vw -12vh 1px 1px #fff,-18vw 22vh 0px 0px #fff,23vw -9vh 1px 0px #fff,50vw 12vh 0px 1px #fff,45vw 2vh 0px 0px #fff,14vw -48vh 1px 0px #fff,23vw 43vh 0px 1px #fff,-40vw 16vh 1px 1px #fff,20vw -31vh 0px 1px #fff,-17vw 44vh 1px 1px #fff,18vw -45vh 0px 0px #fff,33vw -6vh 0px 0px #fff,0vw 7vh 0px 1px #fff,-10vw -18vh 0px 1px #fff,-19vw 5vh 1px 0px #fff,1vw 42vh 0px 0px #fff,22vw 48vh 0px 1px #fff,39vw -8vh 1px 1px #fff,-6vw -42vh 1px 0px #fff,-47vw 34vh 0px 0px #fff,-46vw 19vh 0px 1px #fff,-12vw -32vh 0px 0px #fff,-45vw -38vh 0px 1px #fff,-28vw 18vh 1px 0px #fff,-38vw -46vh 1px 1px #fff,49vw -6vh 1px 1px #fff,-28vw 18vh 1px 1px #fff,10vw -24vh 0px 1px #fff,-5vw -11vh 1px 1px #fff,33vw -8vh 1px 0px #fff,-16vw 17vh 0px 0px #fff,18vw 27vh 0px 1px #fff,-8vw -10vh 1px 1px #fff,
+      -24vw -4vh 0px 0px #fff,52vw -14vh 0px 0px #fff,-2vw 94vh 0px 1px #fff,5vw 4vh 1px 1px #fff,92vw 91vh 1px 0px #fff,-44vw -31vh 0px 0px #fff,64vw 14vh 0px 1px #fff,-3vw -54vh 0px 1px #fff,74vw 53vh 1px 0px #fff,21vw -8vh 1px 0px #fff,-43vw 84vh 1px 1px #fff,23vw 62vh 1px 1px #fff,23vw -14vh 1px 1px #fff,0vw 73vh 1px 1px #fff,43vw -62vh 1px 0px #fff,-41vw -94vh 1px 0px #fff,-21vw 54vh 0px 1px #fff,-44vw -33vh 0px 1px #fff,-31vw 14vh 0px 0px #fff,-63vw -11vh 0px 1px #fff,-32vw -42vh 1px 0px #fff,-83vw -72vh 0px 1px #fff,61vw -91vh 0px 0px #fff,82vw 33vh 1px 0px #fff,-94vw -4vh 0px 0px #fff,61vw 23vh 0px 1px #fff,63vw -81vh 1px 0px #fff,-52vw -3vh 1px 0px #fff,-32vw 42vh 0px 1px #fff,-2vw -53vh 1px 1px #fff,-52vw 9vh 0px 0px #fff,-51vw -43vh 0px 0px #fff,-8vw -91vh 1px 0px #fff,-2vw -2vh 1px 1px #fff,24vw 5vh 0px 1px #fff,-23vw 1vh 1px 0px #fff,-32vw -71vh 0px 0px #fff,44vw 51vh 1px 0px #fff,-4vw 33vh 1px 1px #fff,-34vw 8vh 0px 0px #fff,-84vw -51vh 1px 1px #fff,-42vw 71vh 0px 0px #fff,-13vw 5vh 1px 0px #fff,63vw -83vh 0px 1px #fff,-7vw 84vh 0px 0px #fff,51vw -23vh 0px 0px #fff,92vw -14vh 0px 0px #fff,2vw 73vh 1px 0px #fff,7vw -4vh 1px 1px #fff,51vw 18vh 0px 0px #fff,52vw -31vh 1px 1px #fff,-64vw -21vh 1px 1px #fff,-81vw 22vh 0px 0px #fff,32vw -9vh 1px 0px #fff,5vw 21vh 0px 1px #fff,54vw 2vh 0px 0px #fff,41vw -84vh 1px 0px #fff,32vw 34vh 0px 1px #fff,-4vw 61vh 1px 1px #fff,2vw -13vh 0px 1px #fff,-71vw 44vh 1px 1px #fff,81vw -54vh 0px 0px #fff,33vw -6vh 0px 0px #fff,0vw 7vh 0px 1px #fff,-1vw -81vh 0px 1px #fff,-91vw 5vh 1px 0px #fff,1vw 24vh 0px 0px #fff,22vw 84vh 0px 1px #fff,93vw -8vh 1px 1px #fff,-6vw -24vh 1px 0px #fff,-74vw 43vh 0px 0px #fff,-64vw 91vh 0px 1px #fff,-21vw -23vh 0px 0px #fff,-54vw -83vh 0px 1px #fff,-82vw 81vh 1px 0px #fff,-83vw -64vh 1px 1px #fff,94vw -6vh 1px 1px #fff,-82vw 81vh 1px 1px #fff,1vw -42vh 0px 1px #fff,-5vw -11vh 1px 1px #fff,33vw -8vh 1px 0px #fff,-61vw 71vh 0px 0px #fff,81vw 72vh 0px 1px #fff,-8vw -1vh 1px 1px #fff;
+    animation: zoom 16s alternate infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+.popup { /* code sourced from https://codepen.io/marine-fraysse/pen/eYmBEvQ */
+  display: none;
+  position: fixed;
+  padding: 15px;
+  width: 700 px;
+  left: 29%;
+  margin-left: -150px;
+  top: 15%;
+  margin-top: -100px;
+  background: rgba(0,0,0,0.75);
+  border-radius: 10px;
+  z-index: 20;
+}
+
+#popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: -2;
+}
+
+#popup:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.75);
+  z-index: -1;
+}
+
+#popup img{
+  border-radius: 10px;
+}
