@@ -223,4 +223,4 @@ allCons[86] = new Constellation("Ochotona Princeps","Kachina",[203, 207, 301, 13
 
 allCons[87] = new Constellation("Phoca Neomonachus","Mualani",[301, 361, 447, 281, 180, 69],[178, 370, 422, 438, 386, 413],"Constellations/Phoca_Neomonachus.png","Characters/Mualani.png","Hydro");
 
-//allCons[88] = new Constellation("Chimaera Alebriius","Kinich",[],[],"Constellations/Chimaera_Alebriius.png","Characters/Kinich.png","Dendro");
+allCons[88] = new Constellation("Chimaera Alebriius","Kinich",[194, 150, 237, 423, 235, 134],[209, 170, 84, 270, 457, 358],"Constellations/Chimaera_Alebriius.png","Characters/Kinich.png","Dendro");
