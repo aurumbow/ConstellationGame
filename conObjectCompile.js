@@ -224,3 +224,13 @@ allCons[86] = new Constellation("Ochotona Princeps","Kachina",[203, 207, 301, 13
 allCons[87] = new Constellation("Phoca Neomonachus","Mualani",[301, 361, 447, 281, 180, 69],[178, 370, 422, 438, 386, 413],"Constellations/Phoca_Neomonachus.png","Characters/Mualani.png","Hydro");
 
 allCons[88] = new Constellation("Chimaera Alebriius","Kinich",[194, 150, 237, 423, 235, 134],[209, 170, 84, 270, 457, 358],"Constellations/Chimaera_Alebriius.png","Characters/Kinich.png","Dendro");
+
+allCons[89] = new Constellation("Panthera Ocelota","Xilonen",[125, 77, 254, 120, 334, 433],[421, 251, 310, 114, 74, 265],"Constellations/Panthera_Ocelota.png","Characters/Xilonen.png","Geo");
+
+allCons[90] = new Constellation("Vampyrum Spectrum","Ororon",[37, 104, 263, 288, 407, 470],[342, 207, 249, 311, 211, 342],"Constellations/Vampyrum_Spectrum.png","Characters/Ororon.png","Electro");
+
+allCons[91] = new Constellation("Vultur Gryphus","Chasca",[93, 388, 270, 256, 376, 431],[77, 217, 334, 461, 388, 307],"Constellations/Vultur_Gryphus.png","Characters/Chasca.png","Anemo");
+
+allCons[92] = new Constellation("Patina Anavatlaca.","Citlali",[256, 140, 186, 320, 366, 265],[264, 167, 55, 54, 166, 464],"Constellations/Patina_Anavatlaca.png","Characters/Citlali.png","Cryo");
+
+allCons[93] = new Constellation("Sol Invictus","Mavuika",[255, 213, 381, 293, 213, 131],[276, 358, 357, 144, 145, 350],"Constellations/Sol_Invictus.png","Characters/Mavuika.png","Pyro");
