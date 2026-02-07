@@ -234,3 +234,39 @@ allCons[91] = new Constellation("Vultur Gryphus","Chasca",[93, 388, 270, 256, 37
 allCons[92] = new Constellation("Patina Anavatlaca.","Citlali",[256, 140, 186, 320, 366, 265],[264, 167, 55, 54, 166, 464],"Constellations/Patina_Anavatlaca.png","Characters/Citlali.png","Cryo");
 
 allCons[93] = new Constellation("Sol Invictus","Mavuika",[255, 213, 381, 293, 213, 131],[276, 358, 357, 144, 145, 350],"Constellations/Sol_Invictus.png","Characters/Mavuika.png","Pyro");
+
+allCons[94] = new Constellation("Hirundo Lazuli","LanYan",[278, 436, 328, 216, 52, 154],[88, 230, 406, 425, 291, 111],"Constellations/Hirundo_Lazuli.png","Characters/LanYan.png", "Anemo");
+
+allCons[95] = new Constellation("Tapirus Somniator","Yumemizuki Mizuki",[148, 233, 396, 341, 141, 64],[210, 125, 235, 405, 405, 275],"Constellations/Tapirus_Somniator.png","Characters/Mizuki.png", "Anemo");
+
+allCons[96] = new Constellation("Carnotaurus","Iansan",[205, 256, 144, 256, 364, 320],[163, 250, 298, 465, 290, 139],"Constellations/Carnotaurus.png","Characters/Iansan.png", "Electro");
+
+allCons[97] = new Constellation("Mascara Luctatori","Varesa",[133, 94, 256, 256, 437, 358],[167, 308, 363, 441, 310, 150],"Constellations/Mascara_Luctatori.png","Characters/Varesa.png", "Electro");
+
+allCons[98] = new Constellation("Catena Opele","Ifa",[75, 140, 256, 256, 366, 457],[150, 230, 269, 450, 230, 135],"Constellations/Catena_Opele.png","Characters/Ifa.png", "Anemo");
+
+allCons[99] = new Constellation("Dulciaria Structura","Escoffier",[157, 145, 94, 432, 366, 358],[157, 237, 358, 365, 237, 157],"Constellations/Dulciaria_Structura.png","Characters/Escoffier.png", "Cryo");
+
+allCons[100] = new Constellation("Cantus Choralis","Dahlia",[190, 256, 256, 414, 256, 95],[459, 480, 389, 240, 90, 240],"Constellations/Cantus_Choralis.png","Characters/Dahlia.png", "Hydro");
+
+allCons[101] = new Constellation("Crystallina","Skirk",[201, 98, 294, 406, 301, 168],[310, 145, 57, 213, 387, 428],"Constellations/Crystallina.png","Characters/Skirk.png", "Cryo");
+
+allCons[102] = new Constellation("Vanilla Planifolia","Ineffa",[256, 256, 256, 145, 365, 256],[467, 352, 222, 97, 98, 60],"Constellations/Vanilla_Planifolia.png","Characters/Ineffa.png", "Electro");
+
+allCons[103] = new Constellation("Cistellula Mira","Aino",[238, 273, 218, 355, 284, 150],[436, 387, 305, 251, 113, 186],"Constellations/Cistellula_Mira.png","Characters/Aino.png", "Hydro");
+
+allCons[104] = new Constellation("Cerva Nivea","Lauma",[256, 160, 181, 103, 146, 295],[83, 162, 292, 306, 381, 407],"Constellations/Cerva_Nivea.png","Characters/Lauma.png", "Dendro");
+
+allCons[105] = new Constellation("Laterna Vigilis","Flins",[256, 256, 174, 232, 286, 340],[33, 141, 191, 399, 391, 190],"Constellations/Laterna_Vigilis.png","Characters/Flins.png", "Electro");
+
+allCons[106] = new Constellation("Ludus Latrunculorum","Nefer",[225, 166, 291, 210, 328, 272],[72, 323, 441, 446, 323, 72],"Constellations/Ludus_Latrunculorum.png","Characters/Nefer.png", "Dendro");
+
+allCons[107] = new Constellation("Fragum","Jahoda",[130, 250, 372, 407, 256, 111],[197, 150, 200, 329, 445, 335],"Constellations/Fragum.png","Characters/Jahoda.png", "Anemo");
+
+allCons[108] = new Constellation("Draco Rubedo","Durin",[262, 283, 370, 321, 158, 136],[103, 237, 332, 456, 412, 338],"Constellations/Draco_Rubedo.png","Characters/Durin.png", "Pyro");
+
+allCons[109] = new Constellation("Columbina Hyposelenia","Columbina",[386, 468, 451, 294, 110, 35],[55, 181, 367, 476, 430, 305],"Constellations/Columbina_Hyposelenia.png","Characters/Columbina.png", "Hydro");
+
+allCons[110] = new Constellation("Oriolus","Illuga",[74, 256, 432, 256, 230, 282],[289, 150, 289, 280, 373, 376],"Constellations/Oriolus.png","Characters/Illuga.png", "Geo");
+
+allCons[111] = new Constellation("Equa Alba","Zibai",[290, 224, 146, 373, 201, 127],[147, 82, 213, 223, 302, 422],"Constellations/Equa_Alba.png","Characters/Zibai.png", "Geo");
